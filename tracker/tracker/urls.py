@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from job_application import urls
+from job_application import urls as job_application_urls
+from student import urls as studend_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('application/',include(urls)),
+    path('application/',include(job_application_urls)),
+    path('student/',include(studend_urls)),
 ]

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+  {% if 'user' in request.session %}
+    <div class="d-flex justify-content-end">
+      <a class="btn btn-primary" href="{% url 'logout' %}">Log Out</a>
+    </div>
+  {% endif %}
+  <div class="mx-auto w-25 p-3">
+    <a type="button" class="btn btn-primary" href="{% url 'add_post' %}">Add Post</a>
+  </div>
+{% endblock %}

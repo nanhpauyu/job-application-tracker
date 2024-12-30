@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="d-flex justify-content-end">
+    <a class="btn btn-primary" href="{% url 'logout' %}">Log Out</a>
+  </div>
+  <form action="" method="GET">
+    <div class="input-group my-3">
+      <span class="input-group-text">Enter Link</span>
+      <textarea class="form-control" aria-label="With textarea" name="link" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock %}
