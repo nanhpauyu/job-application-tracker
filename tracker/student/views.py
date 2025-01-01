@@ -40,14 +40,14 @@ def logout(request):
 @api_view(['POST'])
 def add_post(request):
     try:
-        job_title = request.data['jobTitle']
-        job_location = request.data['jobLocation']
-        compensation = request.data['compensation']
-        remote = request.data['remote']
-        company_link = request.data['companyLink']
-        company_name = request.data['companyName']
-        platform = request.data['platform']
-        job_description = request.data['jd']
+        job_title = request.data['jobTitle'].strip()
+        job_location = request.data['jobLocation'].strip()
+        compensation = request.data['compensation'].strip()
+        remote = request.data['remote'].strip()
+        company_link = request.data['companyLink'].strip()
+        company_name = request.data['companyName'].strip()
+        platform = request.data['platform'].strip()
+        job_description = request.data['jd'].strip()
         company = CompanyDetail(
             name=company_name,
             website_link=company_link,

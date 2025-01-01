@@ -78,6 +78,9 @@ start.addEventListener('click', async () => {
         remote = remote === undefined ? 'undefined' : remote
         companyLink = companyLink === undefined ? 'undefined' : companyLink
         companyName = companyName === undefined ? 'undefined' : companyName
+        // console.log(jobTitle)
+        // console.log(jobLocation)
+        // console.log(remote)
         const fetchData = async () => {
             const reponse = await fetch(
                 'http://127.0.0.1:8000/student/add_post',
